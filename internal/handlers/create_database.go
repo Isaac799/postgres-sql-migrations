@@ -3,11 +3,12 @@ package handlers
 import (
 	"fmt"
 	"postgres_sql_migrations/internal/models"
+	"postgres_sql_migrations/internal/repository"
 	"postgres_sql_migrations/internal/services"
 )
 
 func CreateDatabase(cfg *models.Config) error {
-	exists, err := services.DatabaseExists(cfg)
+	exists, err := repository.DatabaseExists(cfg)
 	if err != nil {
 		return fmt.Errorf("error checking database existence: %w", err)
 	}

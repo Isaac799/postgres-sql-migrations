@@ -4,11 +4,12 @@ import (
 	"fmt"
 	"log"
 	"postgres_sql_migrations/internal/models"
+	"postgres_sql_migrations/internal/repository"
 	"postgres_sql_migrations/internal/services"
 )
 
 func DropDatabase(cfg *models.Config, env string) error {
-	exists, err := services.DatabaseExists(cfg)
+	exists, err := repository.DatabaseExists(cfg)
 	if err != nil {
 		return fmt.Errorf("error checking database existence: %w", err)
 	}
