@@ -160,3 +160,13 @@ A: Yes, you can preview changes with this command.
 go run . -e dev -migrate-dry
 ```
 *This allows you to see the changes that would be made without actually altering the database.*
+
+## Other Notes
+
+### Time Formats Used
+
+1. **RFC3339 (2006-01-02T15:04:05Z07:00)**: This format is used for PostgreSQL timestamps, but we use the `NOW()` function for the current time.
+
+2. **RFC1123 (Mon, 02 Jan 2006 15:04:05 MST)**: This format is used for notes and output in the CLI application for better readability.
+
+3. **Custom Format (20060102150405)**: This format is used for migration file names, providing a compact and sortable representation.
