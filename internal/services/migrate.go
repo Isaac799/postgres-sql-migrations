@@ -9,6 +9,8 @@ import (
 	"path/filepath"
 	"postgres_sql_migrations/internal/models"
 	"postgres_sql_migrations/internal/repository"
+	"regexp"
+	"sort"
 )
 
 func DryRunMigrations(cfg *models.Config) error {
@@ -63,12 +65,24 @@ func getMigrationsToApply(db *sql.DB) ([]string, error) {
 	}
 
 	var migrationsToApply []string
+
+	// match 20060102150405_verb_noun
+	re := regexp.MustCompile(`^\d{14}_[a-zA-Z0-9_]+\.sql$`)
+
 	for _, file := range files {
-		if filepath.Ext(file.Name()) != ".sql" || migrationExists(db, file.Name()) {
+		if !re.MatchString(file.Name()) {
+			log.Printf("Skipped file (invalid format): %s", file.Name())
+			continue
+		}
+		if migrationExists(db, file.Name()) {
+			log.Printf("Skipped file (already applied): %s", file.Name())
 			continue
 		}
 		migrationsToApply = append(migrationsToApply, file.Name())
 	}
+
+	// sort file names oldest -> newest
+	sort.Strings(migrationsToApply)
 
 	return migrationsToApply, nil
 }
