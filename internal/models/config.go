@@ -17,6 +17,6 @@ func (cfg *Config) ConnStrDatabase() string {
 }
 
 func (cfg *Config) ConnStr() string {
-	return fmt.Sprintf("user=%s password=%s host=%s port=%s sslmode=%s",
+	return fmt.Sprintf("user=%s password=%s host=%s port=%s dbname=postgres sslmode=%s",
 		cfg.User, cfg.Password, cfg.Host, cfg.Port, cfg.SslMode)
 }
