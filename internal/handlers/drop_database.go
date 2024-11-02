@@ -11,7 +11,7 @@ import (
 func DropDatabase(cfg *models.Config, env string) error {
 	exists, err := repository.DatabaseExists(cfg)
 	if err != nil {
-		return fmt.Errorf("error checking database existence: %w", err)
+		return err
 	}
 	if !exists {
 		fmt.Printf("[ Notice ]: Database '%s' does not exist\n", cfg.Name)

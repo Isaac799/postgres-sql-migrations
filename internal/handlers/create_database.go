@@ -10,7 +10,7 @@ import (
 func CreateDatabase(cfg *models.Config) error {
 	exists, err := repository.DatabaseExists(cfg)
 	if err != nil {
-		return fmt.Errorf("error checking database existence: %w", err)
+		return err
 	}
 	if exists {
 		fmt.Printf("[ Notice ]: Database '%s' already exists\n", cfg.Name)
