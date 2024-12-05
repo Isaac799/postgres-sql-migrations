@@ -1,4 +1,4 @@
-module github.com/Isaac799/postgres_sql_migrations
+module github.com/Isaac799/postgres-sql-migrations
 
 go 1.23.2
 
