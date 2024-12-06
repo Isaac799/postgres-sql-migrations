@@ -7,10 +7,11 @@ import (
 	"log"
 	"os"
 	"path/filepath"
-	"postgres_sql_migrations/internal/models"
-	"postgres_sql_migrations/internal/repository"
 	"regexp"
 	"sort"
+
+	"github.com/Isaac799/postgres-sql-migrations/internal/models"
+	"github.com/Isaac799/postgres-sql-migrations/internal/repository"
 )
 
 func DryRunMigrations(cfg *models.Config) error {

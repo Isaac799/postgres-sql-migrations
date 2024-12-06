@@ -3,7 +3,8 @@ package config
 import (
 	"fmt"
 	"os"
-	"postgres_sql_migrations/internal/models"
+
+	"github.com/Isaac799/postgres-sql-migrations/internal/models"
 )
 
 func loadConfig(env string) (*models.Config, error) {

@@ -2,7 +2,8 @@ package router
 
 import (
 	"flag"
-	"postgres_sql_migrations/internal/models"
+
+	"github.com/Isaac799/postgres-sql-migrations/internal/models"
 )
 
 func parseCliFlags() models.Flags {

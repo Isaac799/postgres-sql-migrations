@@ -4,8 +4,9 @@ import (
 	"database/sql"
 	"fmt"
 	"log"
-	"postgres_sql_migrations/internal/models"
-	"postgres_sql_migrations/internal/repository"
+
+	"github.com/Isaac799/postgres-sql-migrations/internal/models"
+	"github.com/Isaac799/postgres-sql-migrations/internal/repository"
 )
 
 func CreateDatabase(cfg *models.Config) error {

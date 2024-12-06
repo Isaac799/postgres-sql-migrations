@@ -2,8 +2,9 @@ package handlers
 
 import (
 	"fmt"
-	"postgres_sql_migrations/internal/models"
-	"postgres_sql_migrations/internal/services"
+
+	"github.com/Isaac799/postgres-sql-migrations/internal/models"
+	"github.com/Isaac799/postgres-sql-migrations/internal/services"
 )
 
 func SummarizeMigrations(cfg *models.Config) error {

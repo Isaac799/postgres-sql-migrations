@@ -2,7 +2,8 @@ package handlers
 
 import (
 	"fmt"
-	"postgres_sql_migrations/internal/models"
+
+	"github.com/Isaac799/postgres-sql-migrations/internal/models"
 )
 
 func FullReset(cfg *models.Config, env string) error {

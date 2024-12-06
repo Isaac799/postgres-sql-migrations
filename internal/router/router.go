@@ -2,8 +2,9 @@ package router
 
 import (
 	"log"
-	"postgres_sql_migrations/internal/config"
-	"postgres_sql_migrations/internal/handlers"
+
+	"github.com/Isaac799/postgres-sql-migrations/internal/config"
+	"github.com/Isaac799/postgres-sql-migrations/internal/handlers"
 )
 
 func Router() {

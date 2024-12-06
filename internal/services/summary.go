@@ -6,9 +6,10 @@ import (
 	"log"
 	"os"
 	"path/filepath"
-	"postgres_sql_migrations/internal/models"
-	"postgres_sql_migrations/internal/repository"
 	"strings"
+
+	"github.com/Isaac799/postgres-sql-migrations/internal/models"
+	"github.com/Isaac799/postgres-sql-migrations/internal/repository"
 )
 
 func SummarizeMigrations(cfg *models.Config) error {

@@ -4,7 +4,8 @@ import (
 	"database/sql"
 	"fmt"
 	"log"
-	"postgres_sql_migrations/internal/models"
+
+	"github.com/Isaac799/postgres-sql-migrations/internal/models"
 
 	_ "github.com/lib/pq"
 )

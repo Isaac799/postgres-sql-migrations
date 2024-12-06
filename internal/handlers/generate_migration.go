@@ -2,7 +2,8 @@ package handlers
 
 import (
 	"fmt"
-	"postgres_sql_migrations/internal/services"
+
+	"github.com/Isaac799/postgres-sql-migrations/internal/services"
 )
 
 func GenerateMigration(name string) error {

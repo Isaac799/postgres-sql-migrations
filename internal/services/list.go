@@ -3,10 +3,11 @@ package services
 import (
 	"fmt"
 	"log"
-	"postgres_sql_migrations/internal/models"
-	"postgres_sql_migrations/internal/repository"
 	"strings"
 	"time"
+
+	"github.com/Isaac799/postgres-sql-migrations/internal/models"
+	"github.com/Isaac799/postgres-sql-migrations/internal/repository"
 )
 
 func ListAppliedMigrations(cfg *models.Config) error {

@@ -1,7 +1,7 @@
 package main
 
 import (
-	"postgres_sql_migrations/internal/router"
+	"github.com/Isaac799/postgres-sql-migrations/internal/router"
 )
 
 func main() {

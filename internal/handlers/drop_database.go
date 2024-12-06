@@ -3,9 +3,10 @@ package handlers
 import (
 	"fmt"
 	"log"
-	"postgres_sql_migrations/internal/models"
-	"postgres_sql_migrations/internal/repository"
-	"postgres_sql_migrations/internal/services"
+
+	"github.com/Isaac799/postgres-sql-migrations/internal/models"
+	"github.com/Isaac799/postgres-sql-migrations/internal/repository"
+	"github.com/Isaac799/postgres-sql-migrations/internal/services"
 )
 
 func DropDatabase(cfg *models.Config, env string) error {
